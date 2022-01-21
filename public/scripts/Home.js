@@ -12,3 +12,9 @@ var resizeObserver = new ResizeObserver(function (entries) {
     });
 });
 resizeObserver.observe(document.getElementById('TheMV'));
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === "F12") {
+        getCoords();
+    }
+});
