@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+
+
+body {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.top-header {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(72,87,94);
+}
+
+.top-header-right {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1 40%;
+    min-width: 50ch;
+}
+
+.top-header-left {  
+    width: 100%; 
+    flex: 1 1 60%;
+}
+
+
+.top-header-right p {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    line-height: 81px;
+    color: rgb(162,156,156);
+    padding: 0 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.top-header-right p:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.TheMVContainer {
+    z-index: 1;   
+    position: absolute;
+    top: 11%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background-color: rgb(72,87,94);
+    justify-content: center;
+}
+
+.TheMV {
+    width: 100%;
+    height: auto;  
+}
+
+@media screen and (max-width: 930px) {
+    img {
+         width: auto;
+    }
+
+    .infomation {
+        left: 0;
+        top: 350px;
+    }
+
+}
+
+@media screen and (min-width: 931px) {
+
+    .infomation {
+        left: 18%;
+        top: 800px;;
+    }
+
+}
+
+@media screen and (min-width: 755px) {
+    .other-info {
+        margin-top: 20%;
+    }
+}
+    
+
+.infomation {
+    font-size: 22px;
+    color: rgb(238,230,230);
+    display: inline-flex;
+    flex-wrap: wrap;
+    height: auto;   
+    position: absolute;
+    flex-direction: row;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.infomation > div {
+    margin-right: 40px;
+    margin-left: 40px;
+    min-width: 20ch;
+}
+
+.about-us {
+    letter-spacing: 0.05em;
+    flex: 20%;
+}
+
+.other-info {
+    flex: 20%;
+}
+
+
+.infomation p  {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.footer {
+    position: absolute;
+    top: 2000px;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background-color: rgb(72,87,94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(162,156,156);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 1.5rem;
+    padding: 10px 0px;
+}
