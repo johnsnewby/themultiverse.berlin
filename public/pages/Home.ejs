@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home</title>
         <link rel="stylesheet" href="css/Home.css">
+        <script src='scripts/Home.js' defer></script>
     </head>
 
     <body>
@@ -17,10 +19,10 @@
         </div>
     </body>
     <div class="TheMVContainer">
-        <img src="img/TheMultiVerse.jpg" alt="TheMV">
+        <img onmouseover="getCoords()" src="img/TheMultiVerse.jpg" alt="TheMV" id="TheMV">
     </div>
 
-    <div class="infomation">
+    <div class="infomation" id="infomation">
         <div class="about-us">
             <p><h1>ÜBER UNS</h1>Willkommen bei The Multiverse!<br>
                 Süßigkeiten, Kaffee oder beides?<br>
