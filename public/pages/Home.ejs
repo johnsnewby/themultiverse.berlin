@@ -13,8 +13,8 @@
         <div class="top-header">
             <div class="top-header-left"></div>
             <div class="top-header-right">
-                <p>ÜBER UNS</p>
-                <p>KONTAKT</p>
+                <p onclick="smoothScroll(infomation)">ÜBER UNS</p>
+                <p onclick="smoothScroll(cf)">KONTAKT</p>
             </div>
         </div>
     </body>
@@ -31,7 +31,7 @@
                 <br>
                 Wir arbeiten an einem Webshop für Sie,<br> bitte haben Sie etwas Geduld!</p>
         </div>
-        <div class="other-info">
+        <div class="other-info" id="other-info">
             <p>            ÖFFNUNGSZEITEN – LADEN
                 <br>
                 Montag – Freitag von 12 bis 19 Uhr
@@ -43,10 +43,34 @@
                 <br>
                 10249 Berlin</p>
         </div>
+        
+        <div class="contact-form" id="cf">
+            <div class="contact-form-left" id="contact-form-left">
+                <form action="" class="form-left">
+                    <span class="name">Vornamen *</span>
+                    <input type="text" name="name" required="true">
+                    <span class="surname">Nachnamen *</span>
+                    <input type="text" name="surname" required="true">
+                    <span class="email">Ihre E-Mail eingeben *</span>
+                    <input type="email" name="Email" required="true">
+                    <span class="subject">Geben Sie Ihren Betreff ein</span>
+                    <input type="text" name="subject">
+                    <span class="message">Ihre Nachricht eingeben</span>
+                    <textarea name="Message"></textarea>  
+                    <input type="submit" value="Senden" class="send">
+                </form>
+            </div>
+            <div class="contact-form-right" id="contact-form-right">
+                <h1>KONTAKT</h1>
+                <p>Bitte, wenn Sie Fragen zum Shop haben,<br> kontaktieren Sie uns bitte hier!</p>
+                <p>themultiverse.berlin@gmail.com.</p>
+            </div>
+        </div>
     </div>
 
 
-    <div class="footer">
+
+    <div class="footer" id="footer">
         <p>© 2021 by The Multiverse</p>
     </div>
 </html>

@@ -4,7 +4,6 @@
 body {
     background-color: black;
     height: 100%;
-    width: 100%;
 }
 
 .top-header {
@@ -58,43 +57,40 @@ body {
     justify-content: center;
 }
 
-.TheMV {
-    width: 100%;
-    height: auto;  
-}
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 930px) and (min-width: 600px) {
+
     img {
-         width: 100%;
+        width: 100%;
     }
 
     .infomation {
-        left: 0;
-        top: 350px;
+       left: 0;
+       top: 350px;
     }
-
 }
 
-@media screen and (min-width: 931px) {
+@media screen and (min-width: 1155px) {
 
     .infomation {
         left: 18%;
-        top: 800px;;
+        top: 800px;
     }
-
 }
 
-@media screen and (min-width: 755px) {
+@media screen and (min-width: 921px) {
     .other-info {
         margin-top: 20%;
     }
 }
-    
+
+
+
 
 .infomation {
     font-size: 22px;
     color: rgb(238,230,230);
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     height: auto;   
     position: absolute;
@@ -102,10 +98,13 @@ body {
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 
+
+
+
 .infomation > div {
     margin-right: 40px;
     margin-left: 40px;
-    min-width: 20ch;
+    min-width: 25ch;
 }
 
 .about-us {
@@ -124,11 +123,137 @@ body {
     flex-wrap: wrap;
 }
 
+  
+.contact-form {
+    top: 150%;
+    left: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: absolute;
+}
+
+.form-left {
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.contact-form-left {
+    min-width: 25ch;
+    flex: 1 1 50%;
+}
+
+.contact-form-right {
+    flex: 1 1 30%;
+    margin-top: 80px;
+}
+
+.contact-form-right > * {
+    line-height: 1.4em;
+}
+
+.contact-form-right h1 {
+    font-size: 50px;
+    letter-spacing: 0.1em;
+}
+
+.contact-form-right p {
+    font-size: 22px;
+    letter-spacing: 0.05em;
+}
+
+.form-left > * {
+    flex: 1 1 50%;
+}
+
+.contact-form > div {
+    background-color: black;
+    margin-right: 40px;
+}
+
+input[type="text"], input[type="email"] {
+    height: 40px;
+}
+
+textarea {
+    height: 150px;
+}
+
+
+input[type="text"], input[type="email"], textarea{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border: 1px solid white;
+    background-color: black; 
+}
+
+input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
+    border: 2px solid white;
+}
+
+.send {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+
+    .contact-form-left {    
+        padding-right: 15px;
+    }
+
+    .contact-form {
+        top: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .contact-form > div {
+        margin-right: 0;
+    }
+
+    .infomation {
+        font-size: 20px;
+    }
+
+    .infomation > div {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .contact-form-right p {
+        font-size: 20px;
+    }
+
+    .contact-form-right h1 {
+        font-size: 30px;
+    }
+
+    .contact-form-right {
+        flex: 1 1 100%;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
 
 .footer {
     position: absolute;
-    top: 2000px;
     left: 0;
+    bottom: 0;
     height: auto;
     width: 100%;
     background-color: rgb(72,87,94);
@@ -138,5 +263,5 @@ body {
     color: rgb(162,156,156);
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.5rem;
-    padding: 10px 0px;
+    padding: 50px 0px;
 }
