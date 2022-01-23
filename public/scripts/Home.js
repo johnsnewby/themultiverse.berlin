@@ -63,9 +63,24 @@ window.onload = function () {
 }
 
 function openNav() {
+    document.body.style.overflow = 'hidden';
     document.getElementById("nav").style.width = "100%";
 }
 
 function closeNav() {
+    document.body.style.overflow = 'auto';
     document.getElementById("nav").style.width = "0%";
 }
+
+window.addEventListener('scroll', function (e) {
+    if (window.innerWidth < 600) {
+        return;
+    }
+    if (document.getElementById('th').style.zIndex != 4 && window.scrollY > 43) {
+        document.getElementById('th').style.zIndex = '4';
+    } else {
+        if(document.getElementById('th').style.zIndex != 0 && window.scrollY < 43){
+            document.getElementById('th').style.zIndex = '0';
+        }
+    } 
+});  
