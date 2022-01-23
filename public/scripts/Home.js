@@ -41,8 +41,11 @@ function smoothScroll(div) {
     var element = document.getElementById(div.id);
     var position = element.getBoundingClientRect();
     var y = position.top;
+    if (window.innerWidth > 600) {
+        y = y - 100;
+    }
     window.scrollTo({
-        top: y + window.scrollY - 20,
+        top: y + window.scrollY,
         behavior: 'smooth'
     });
 

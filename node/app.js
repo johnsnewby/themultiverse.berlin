@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 
 
 app.listen(
-    80,
+    3000,
     () => console.log('Server started on port 80')
 )
 

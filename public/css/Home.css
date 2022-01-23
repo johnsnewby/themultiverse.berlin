@@ -228,10 +228,9 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
         display: block;
         z-index: 2;
         position: fixed;
-        top: 0;
-        right: 0;
+        top: 5px;
+        right: 10px;
         color: white;
-        padding: 2px 5px;
     }
 
     .top-header {
