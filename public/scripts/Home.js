@@ -37,11 +37,12 @@ window.addEventListener('resize', footerResize);
 
 
 function smoothScroll(div) {
+    closeNav();
     var element = document.getElementById(div.id);
     var position = element.getBoundingClientRect();
     var y = position.top;
     window.scrollTo({
-        top: y + window.scrollY - 90,
+        top: y + window.scrollY - 20,
         behavior: 'smooth'
     });
 
@@ -56,4 +57,12 @@ window.onload = function () {
         footerResize();
         document.getElementById('footer').style.display = 'flex';
     }, 2);
+}
+
+function openNav() {
+    document.getElementById("nav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("nav").style.width = "0%";
 }
