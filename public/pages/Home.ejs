@@ -15,8 +15,8 @@
             <div class="top-header-right" id="nav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <p onclick="smoothScroll(infomation)"><%=t.ABOUT %></p>
+                <p onclick="smoothScroll(map)"><%=t.MAP %></p>
                 <p onclick="smoothScroll(cf)"><%=t.KONTAKT %></p>
-                <p onclick="smoothScroll(map)">MAP</p>
                 <div class="flags">
                     <p onclick="window.location='?clang=de'"><img src="img/de.png" width="30"/></p>
                     <p onclick="window.location='?clang=se'"><img src="img/se.png" width="30"></p>
@@ -50,7 +50,7 @@
         </div>
 
         <div class="map" id="map">
-          <h1>How to find us</h1>
+          <h1><%=t.find_us%></h1>
           <div class="mapouter">
             <div class="gmap_canvas">
               <iframe height="546" id="gmap_canvas" src="https://maps.google.com/maps?q=The%20Multiverse,%20Ebertystra%C3%9Fe%2024,%20Berlin&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>

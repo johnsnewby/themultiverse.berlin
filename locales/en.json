@@ -1,5 +1,6 @@
 {
   "ABOUT": "ABOUT US",
+  "MAP": "MAP",
   "KONTAKT": "CONTACT",
   "WELCOME": "Welcome to The Multiverse!",
   "WELCOME_TEXT": "Sweets, coffee, or both? We have sweets from Sweden, a few from Japan--because why not? If you like to make your own bags up, then pick'n'mix is right for you. If you'd rather have ready-made bags, we have them too! We're working on a webshop for you--please be patient!",
@@ -10,6 +11,7 @@
   "Saturday": "Saturday",
   "from": "from",
   "to": "to",
+  "find_us": "How to find us",
   "first_name": "First name",
   "surname": "Family name",
   "email": "Your email address",
