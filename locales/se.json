@@ -1,1 +1,20 @@
-{}
+{
+  "ABOUT": "OM OSS",
+  "KONTAKT": "KONTAKT",
+  "WELCOME": "Välkommen till, The Multiverse!",
+  "WELCOME_TEXT": "OM OSS Välkommen till, The Multiverse.  Godis, kaffe, dricka. Vi har godis från Skandinavien och Amerika!  Om du gillar att göra din egen godispåse då är Plock godis (Pick'N'Mix) något för dig. Om du föredrar färdiga påsar har vi självklart det också! Vi arbetar på en webshop för dig, så ha tålamod!",
+  "OPENING_TIMES": "OPENING TIMES",
+  "Monday": "Monday",
+  "Friday": "Fredag",
+  "oclock": "o'clock",
+  "Saturday": "Lördag",
+  "from": "från",
+  "to": "till",
+  "first_name": "För namn",
+  "surname": "Efternamn",
+  "email": "Din email address",
+  "subject": "Subject",
+  "message": "Ditt meddelande",
+  "submit": "Skicka",
+  "contact_message": "Kontakta oss här med era frågor"
+}
