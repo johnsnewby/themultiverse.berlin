@@ -2,11 +2,13 @@ const express = require('express');
 const multiparty = require("multiparty");
 const nodemailer = require('nodemailer');
 const path = require('path');
+
 const app = express();
+const mailer = process.env.MAILHOST || 'localhost';
 const port = process.env.PORT || 3000;
 
 const transporter = nodemailer.createTransport({
-  host: "localhost", //replace with your email provider
+  host: mailer, //replace with your email provider
   port: 25,
    tls: {
      rejectUnauthorized: false // TODO: maybe remove in prod?
@@ -18,7 +20,7 @@ transporter.verify(function (error, success) {
   if (error) {
     console.log(error);
   } else {
-    console.log("SMTP server is ready to take our messages");
+    console.log("SMTP server " + mailer + " is ready to take our messages");
   }
 });
 
@@ -41,7 +43,7 @@ app.get(`/`, (req, res) => {
   res.render('Home');
 });
 
-app.post('/mail', (req, rest) => {
+app.post('/mail', (req, res) => {
   let form = new multiparty.Form();
   let data = {};
   form.parse(req, function (err, fields) {
@@ -50,7 +52,6 @@ app.post('/mail', (req, rest) => {
       data[property] = fields[property].toString();
     });
 
-    //2. You can configure the object however you want
     const mail = {
       from: data.name,
       to: process.env.EMAIL || 'john@newby.org',
@@ -58,7 +59,6 @@ app.post('/mail', (req, rest) => {
       text: 'foo'
     };
 
-    //3.
     transporter.sendMail(mail, (err, data) => {
       if (err) {
         console.log(err);
