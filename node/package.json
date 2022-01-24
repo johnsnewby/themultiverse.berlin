@@ -13,6 +13,9 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.2",
-    "nodemon": "^2.0.15"
+    "multiparty": "^4.2.3",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "optionator": "^0.9.1"
   }
 }
