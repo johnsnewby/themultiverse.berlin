@@ -1,7 +1,26 @@
 const express = require('express');
+const multiparty = require("multiparty");
+const nodemailer = require('nodemailer');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
+
+const transporter = nodemailer.createTransport({
+  host: "localhost", //replace with your email provider
+  port: 25,
+   tls: {
+     rejectUnauthorized: false // TODO: maybe remove in prod?
+   }
+});
+
+// verify connection configuration
+transporter.verify(function (error, success) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("SMTP server is ready to take our messages");
+  }
+});
 
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/css', express.static(path.join(__dirname + '../public/css')));
@@ -18,5 +37,35 @@ app.listen(
 )
 
 app.get(`/`, (req, res) => {
-    res.render('Home');
+  console.log("get /");
+  res.render('Home');
+});
+
+app.post('/mail', (req, rest) => {
+  let form = new multiparty.Form();
+  let data = {};
+  form.parse(req, function (err, fields) {
+    console.log(fields);
+    Object.keys(fields).forEach(function (property) {
+      data[property] = fields[property].toString();
+    });
+
+    //2. You can configure the object however you want
+    const mail = {
+      from: data.name,
+      to: process.env.EMAIL || 'john@newby.org',
+      subject: 'Mail from ${data.name} ${data.surname}',
+      text: 'foo'
+    };
+
+    //3.
+    transporter.sendMail(mail, (err, data) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send("Something went wrong.");
+      } else {
+        res.status(200).send("Email successfully sent to recipient!");
+      }
+    });
+  });
 });

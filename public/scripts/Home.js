@@ -49,7 +49,7 @@ function smoothScroll(div) {
         behavior: 'smooth'
     });
 
-} 
+}
 
 
 document.body.style.zoom="100%"
@@ -82,5 +82,23 @@ window.addEventListener('scroll', function (e) {
         if(document.getElementById('th').style.zIndex != 0 && window.scrollY < 43){
             document.getElementById('th').style.zIndex = '0';
         }
-    } 
-});  
+    }
+});
+
+
+const form = document.getElementById("contact-form");
+
+const formEvent = form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let mail = new FormData(form);
+  sendMail(mail);
+});
+
+const sendMail = (mail) => {
+  fetch("/mail", {
+    method: "post",
+    body: mail,
+  }).then((response) => {
+    return response.json();
+  });
+};
