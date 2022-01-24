@@ -16,6 +16,7 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <p onclick="smoothScroll(infomation)"><%=t.ABOUT %></p>
                 <p onclick="smoothScroll(cf)"><%=t.KONTAKT %></p>
+                <p onclick="smoothScroll(map)">MAP</p>
                 <p onclick="window.location='?clang=de'"><img src="img/de.png" width="30"/></p>
                 <p onclick="window.location='?clang=se'"><img src="img/se.png" width="30"></p>
                 <p onclick="window.location='?clang=en'"><img src="img/en.png" width="30"></p>
@@ -49,6 +50,7 @@
             <div class="contact-form-left" id="contact-form-left">
                 <form action="" class="form-left">
                     <span class="name"><%=t.first_name%> *</span>
+
                     <input type="text" name="name" required="true">
                     <span class="surname"><%=t.surname%> *</span>
                     <input type="text" name="surname" required="true">
@@ -59,6 +61,7 @@
                     <span class="message"><%=t.message%></span>
                     <textarea name="Message"></textarea>
                     <input type="submit" value="<%=t.submit%>" class="send">
+
                 </form>
             </div>
             <div class="contact-form-right" id="contact-form-right">
