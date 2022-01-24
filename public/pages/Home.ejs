@@ -4,7 +4,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home</title>
+        <title><%=t.Home%></title>
         <link rel="stylesheet" href="css/Home.css">
         <script src='scripts/Home.js' defer></script>
     </head>
@@ -14,8 +14,8 @@
             <div class="top-header-left"></div>
             <div class="top-header-right" id="nav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <p onclick="smoothScroll(infomation)">ÜBER UNS</p>
-                <p onclick="smoothScroll(cf)">KONTAKT</p>
+                <p onclick="smoothScroll(infomation)"><%=t.ABOUT %></p>
+                <p onclick="smoothScroll(cf)"><%=t.KONTAKT %></p>
             </div>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="open">&#9776;</span>
         </div>
@@ -26,45 +26,41 @@
 
     <div class="infomation" id="infomation">
         <div class="about-us">
-            <p><h1>ÜBER UNS</h1>Willkommen bei The Multiverse!<br>
-                Süßigkeiten, Kaffee oder beides?<br>
-                Wir haben Süßigkeiten aus Schweden,<br> einige Süßigkeiten aus Japan, denn,<br> warum nicht?!
-                Wenn du gerne<br> deine eigene Tüte machst, dann ist Pick'N'Mix genau das Richtige für dich.<br> Wenn du lieber schon fertige<br> Tüten magst,haben wir auch die!</span></span><br>
-                <br>
-                Wir arbeiten an einem Webshop für Sie,<br> bitte haben Sie etwas Geduld!</p>
+            <p><h1><%=t.ABOUT%></h1><%=t.WELCOME%><br>
+                <%=t.WELCOME_TEXT%></p>
         </div>
         <div class="other-info">
-            <p>            ÖFFNUNGSZEITEN – LADEN
+            <p>            <%=t.OPENING_TIMES%>
                 <br>
-                Montag – Freitag von 12 bis 19 Uhr
+                <%=t.Monday%> – <%=t.Friday%> <%=t.from%> 12 <%=t.to%> 19 <%=t.oclock%>
                 <br>
-                Samstag von 13 bis 18 Uhr geöffnet.
+                <%=t.Saturday%> <%=t.from%> 13 <%=t.to%> 18 <%=t.oclock%>.
                 <br>
                 <br>
                 Ebertystr 24
                 <br>
                 10249 Berlin</p>
         </div>
-        
+
         <div class="contact-form" id="cf">
             <div class="contact-form-left" id="contact-form-left">
                 <form action="" class="form-left">
-                    <span class="name">Vornamen *</span>
+                    <span class="name"><%=t.first_name%> *</span>
                     <input type="text" name="name" required="true">
-                    <span class="surname">Nachnamen *</span>
+                    <span class="surname"><%=t.surname%> *</span>
                     <input type="text" name="surname" required="true">
-                    <span class="email">Ihre E-Mail eingeben *</span>
+                    <span class="email"><%=t.email%> *</span>
                     <input type="email" name="Email" required="true">
-                    <span class="subject">Geben Sie Ihren Betreff ein</span>
+                    <span class="subject"><%=t.subject%></span>
                     <input type="text" name="subject">
-                    <span class="message">Ihre Nachricht eingeben</span>
-                    <textarea name="Message"></textarea>  
-                    <input type="submit" value="Senden" class="send">
+                    <span class="message"><%=t.message%></span>
+                    <textarea name="Message"></textarea>
+                    <input type="submit" value="<%=t.submit%>" class="send">
                 </form>
             </div>
             <div class="contact-form-right" id="contact-form-right">
-                <h1>KONTAKT</h1>
-                <p>Bitte, wenn Sie Fragen zum Shop haben,<br> kontaktieren Sie uns bitte hier!</p>
+                <h1><%=t.KONTAKT%></h1>
+                <p><%= t.contact_message %></p>
                 <p>themultiverse.berlin@gmail.com.</p>
             </div>
         </div>
