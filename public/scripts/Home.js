@@ -36,6 +36,11 @@ function footerResize() {
 window.addEventListener('resize', footerResize);
 
 
+
+
+
+
+
 function smoothScroll(div) {
     closeNav();
     var element = document.getElementById(div.id);
@@ -53,6 +58,7 @@ function smoothScroll(div) {
 
 
 document.body.style.zoom="100%"
+
 
 window.onload = function () {
     document.getElementById('footer').style.display = 'none';
@@ -72,18 +78,6 @@ function closeNav() {
     document.getElementById("nav").style.width = "0%";
 }
 
-window.addEventListener('scroll', function (e) {
-    if (window.innerWidth < 600) {
-        return;
-    }
-    if (document.getElementById('th').style.zIndex != 4 && window.scrollY > 43) {
-        document.getElementById('th').style.zIndex = '4';
-    } else {
-        if(document.getElementById('th').style.zIndex != 0 && window.scrollY < 43){
-            document.getElementById('th').style.zIndex = '0';
-        }
-    }
-});
 
 
 const form = document.getElementById("contact-form");
@@ -102,3 +96,4 @@ const sendMail = (mail) => {
     return response;
   });
 };
+

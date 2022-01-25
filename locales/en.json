@@ -1,5 +1,6 @@
 {
   "ABOUT": "ABOUT US",
+  "MAP": "MAP",
   "KONTAKT": "CONTACT",
   "WELCOME": "Welcome to The Multiverse!",
   "OPENING_TIMES": "OPENING TIMES",
@@ -9,11 +10,12 @@
   "Saturday": "Saturday",
   "from": "from",
   "to": "to",
+  "find_us": "How to find us",
   "first_name": "First name",
   "surname": "Family name",
   "email": "Your email address",
   "subject": "Subject",
-  "message": "Your mssage",
+  "message": "Your message",
   "submit": "Send",
   "contact_message": "Please contact us here with any enquiries"
 }

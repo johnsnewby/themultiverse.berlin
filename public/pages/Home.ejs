@@ -15,17 +15,19 @@
             <div class="top-header-right" id="nav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <p onclick="smoothScroll(infomation)"><%=t.ABOUT %></p>
+                <p onclick="smoothScroll(map)"><%=t.MAP %></p>
                 <p onclick="smoothScroll(cf)"><%=t.KONTAKT %></p>
-                <p onclick="smoothScroll(map)">MAP</p>
-                <p onclick="window.location='?clang=de'"><img src="img/de.png" width="30"/></p>
-                <p onclick="window.location='?clang=se'"><img src="img/se.png" width="30"></p>
-                <p onclick="window.location='?clang=en'"><img src="img/en.png" width="30"></p>
+                <div class="flags">
+                    <p onclick="window.location='?clang=de'"><img src="img/de.png" width="30"/></p>
+                    <p onclick="window.location='?clang=se'"><img src="img/se.png" width="30"></p>
+                    <p onclick="window.location='?clang=en'"><img src="img/en.png" width="30"></p>
+                </div>
             </div>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="open">&#9776;</span>
         </div>
     </body>
     <div class="TheMVContainer">
-        <img src="img/TheMultiVerse-black.jpg" alt="TheMV" id="TheMV">
+        <img src="img/TheMultiVerse-black-resized.jpg" alt="TheMV" id="TheMV">
     </div>
 
     <div class="infomation" id="infomation">
@@ -48,12 +50,12 @@
         </div>
 
         <div class="map" id="map">
-          <h1>How to find us</h1>
+          <h1><%=t.find_us%></h1>
           <div class="mapouter">
             <div class="gmap_canvas">
-              <iframe width="600" height="546" id="gmap_canvas" src="https://maps.google.com/maps?q=The%20Multiverse,%20Ebertystra%C3%9Fe%2024,%20Berlin&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              <iframe height="546" id="gmap_canvas" src="https://maps.google.com/maps?q=The%20Multiverse,%20Ebertystra%C3%9Fe%2024,%20Berlin&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
               <br>
-              <style>.mapouter{position:relative;text-align:right;height:546px;width:600px;}</style><a href="https://www.embedgooglemap.net">embed google maps in gmail</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:546px;width:600px;}</style>
+              <style>.mapouter{position:relative;text-align:left;height:546px;}</style><a href="https://www.embedgooglemap.net">embed google maps in gmail</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:546px;}</style>
             </div>
           </div>
         </div>

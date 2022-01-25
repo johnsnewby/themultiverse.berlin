@@ -1,6 +1,7 @@
 {
-  "ABOUT": "ABOUT US",
+
   "KONTAKT": "KONTACT",
+  "MAP": "KARTE",
   "ABOUT": "ÜBER UNS",
   "WELCOME": "Willkommen bei The Multiverse!",
   "WELCOME_TEXT": "Süßigkeiten, Kaffee oder beides? Wir haben Süßigkeiten aus Schweden, einige Süßigkeiten aus Japan, denn, warum nicht?! Wenn du gerne deine eigene Tüte machst, dann ist Pick'N'Mix genau das Richtige für dich. Wenn du lieber schon fertige Tüten magst,haben wir auch die! Wir arbeiten an einem Webshop für Sie, bitte haben Sie etwas Geduld!",
@@ -11,6 +12,7 @@
   "Saturday": "Samstag",
   "from": "von",
   "to": "bis",
+  "find_us": "So finden Sie uns",
   "first_name": "Vornamen",
   "surname": "Nachnamen",
   "email": "Ihre E-Mail ingeben",
