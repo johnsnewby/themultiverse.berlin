@@ -31,7 +31,7 @@
     <div class="infomation" id="infomation">
         <div class="about-us">
             <p><h1><%=t.ABOUT%></h1><%=t.WELCOME%><br>
-                <%=t.WELCOME_TEXT%></p>
+                <%- include("about-" + lang + ".ejs") %></p>
         </div>
         <div class="other-info">
             <p>            <%=t.OPENING_TIMES%>
@@ -58,7 +58,9 @@
           </div>
         </div>
         <div class="contact-form" id="cf">
+
             <div class="contact-form-left" id="contact-form-left">
+                          <h1><%=t.KONTAKT%></h1>
                 <form action="" class="form-left">
                     <span class="name"><%=t.first_name%> *</span>
 
@@ -76,7 +78,6 @@
                 </form>
             </div>
             <div class="contact-form-right" id="contact-form-right">
-                <h1><%=t.KONTAKT%></h1>
                 <p><%= t.contact_message %></p>
                 <p>themultiverse.berlin@gmail.com.</p>
             </div>
