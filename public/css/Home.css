@@ -215,7 +215,7 @@ input[type="text"], input[type="email"], textarea{
 }
 
 input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
-    border: 2px solid white;
+    box-shadow: inset 0 0 0 1px white;
 }
 
 .send {
@@ -343,20 +343,20 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
         width: 100%;
     }
 }
-    
+
 
 
 @media screen and (max-width: 1040px) {
     .contact-form {
         top: 100%;
         flex-direction: column-reverse;
-    }   
+    }
 
     .contact-form-right {
         flex: 1 1 100%;
         margin-top: 10px;
         margin-bottom: 10px;
-    }   
+    }
 }
 
 
@@ -375,4 +375,3 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
     font-size: 1.5rem;
     padding: 50px 0px;
 }
-
