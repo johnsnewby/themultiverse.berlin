@@ -7,7 +7,7 @@ const path = require('path');
 
 const app = express();
 const mailer = process.env.MAILHOST || 'localhost';
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 const transporter = nodemailer.createTransport({
   host: mailer, //replace with your email provider

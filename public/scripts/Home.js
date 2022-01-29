@@ -80,6 +80,7 @@ function closeNav() {
 
 
 
+
 const form = document.getElementById("contact-form");
 
 const formEvent = form.addEventListener("submit", (event) => {
