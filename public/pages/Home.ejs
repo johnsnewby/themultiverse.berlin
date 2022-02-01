@@ -7,15 +7,7 @@
         <title><%=t.Home%></title>
         <link rel="stylesheet" href="css/Home.css">
         <script src='scripts/Home.js' defer></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E7C0D6B5Y"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-1E7C0D6B5Y');
-        </script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     </head>
 
     <body>
@@ -36,6 +28,28 @@
             </div>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="open">&#9776;</span>
         </div>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1E7C0D6B5Y"></script>
+	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+	  var cc = window.cookieconsent.initialise({
+	      "palette": {
+		  "popup": {
+		      "background": "#000"
+		  },
+		  "button": {
+		      "background": "#f1d600"
+		  }
+	      },
+	      "type": "opt-out",
+	      "onStatusChange": (status, chosenBefore) => {
+		  if ( status != 'accept' ) { return; }		  
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-1E7C0D6B5Y');
+	      }
+	  });
+	</script>	
     </body>
     <div class="TheMVContainer">
         <img src="img/TheMultiVerse-black-resized.jpg" alt="TheMV" id="TheMV">
@@ -105,7 +119,7 @@
 
             <div class="contact-form-left" id="contact-form-left">
                           <h1><%=t.KONTAKT%></h1>
-                <form action="" class="form-left">
+                <form action="" class="form-left" id="contact-form">
                     <span class="name"><%=t.first_name%> *</span>
 
                     <input type="text" name="name" required="true">
@@ -131,6 +145,6 @@
 
 
     <div class="footer" id="footer">
-        <p>© 2021 by The Multiverse</p>
+        <p>© 2021 by The Multiverse <a href="/pages/impressum.html">impressum</a></p>
     </div>
 </html>
