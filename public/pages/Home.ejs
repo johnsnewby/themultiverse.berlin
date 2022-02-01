@@ -17,7 +17,7 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <p onclick="smoothScroll(infomation)"><%=t.ABOUT %></p>
                 <p onclick="smoothScroll(map)"><%=t.MAP %></p>
-                <p onclick="smoothScroll(Sweets)"><%=t.SWEETS %></p>
+                <!-- <p onclick="smoothScroll(Sweets)"><%=t.SWEETS %></p> -->
                 <p onclick="smoothScroll(Coffee)"><%=t.COFFEE %></p>
                 <p onclick="smoothScroll(cf)"><%=t.KONTAKT %></p>
                 <div class="flags">
@@ -84,36 +84,27 @@
             </div>
           </div>
         </div>
-
+<!--
         <div id="Sweets">
             <div id="left">
                 <h1>Sweets</h1>
-                <%- include('sweets') %>
+                <%- include('sweets-' + lang + '.ejs') %>
             </div>
             <div id="right">
-                <!--<img src="img/Sweets.jpg" alt="Sweets">-->
+                <img src="img/Sweets.jpg" alt="Sweets">
             </div>
         </div>
-
+-->
         <div id="Coffee">
             <div id="left">
-                <h1>Coffee</h1>
-                <%- include('coffee') %>
+                <h1><%= t.COFFEE %></h1>
+                <%- include('coffee-' + lang) %>
             </div>
             <div id="right">
                 <img src="img/coffeemaschine.jpeg" alt="Coffee" id="Coffeeimg">
 
             </div>
         </div>
-
-
-
-
-
-
-
-
-
 
         <div class="contact-form" id="cf">
 
