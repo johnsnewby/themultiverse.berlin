@@ -58,7 +58,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        flex: 1 1 40%;
+        flex: 1 1 80%;
         min-width: 50ch;
         z-index: -1;
     }
