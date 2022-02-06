@@ -4,6 +4,7 @@
 body {
     background-color: black;
     height: 100%;
+    transition: 0.5s;
 }
 
 .top-header {
@@ -57,7 +58,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        flex: 1 1 40%;
+        flex: 1 1 80%;
         min-width: 50ch;
         z-index: -1;
     }
@@ -147,7 +148,7 @@ body {
 
 
 .contact-form {
-    top: 150%;
+    top: 200%;
     left: 0;
     font-family: 'Be Vietnam Pro', sans-serif;
     color: white;
@@ -381,9 +382,61 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
 
 
 
+#Sweets {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 110%;
+    left: 0;
+}
+
+#Coffee {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: black;
+    position: absolute;
+    top: 150%;
+    left: 0;
+}
+
+#Sweets #right {
+    flex: 1 1 30%;
+}
+
+#Sweets #left {
+    flex: 1 1 30%;
+    margin-right: 80px;
+}
+
+#Coffee #right {
+    flex: 1 1 30%;
+}
+
+#Coffee #left {
+    flex: 1 1 30%;
+    margin-right: 150px;
+}
+
+#Coffee #Coffeeimg {
+    position: relative;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 100%;
+
+}
+
 @media screen and (max-width: 1040px) {
+
+    #Coffee {
+        top: 135%
+    }
+
     .contact-form {
-        top: 100%;
+        top: 160%;
         flex-direction: column-reverse;
     }
 
@@ -410,3 +463,5 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
     font-size: 1.5rem;
     padding: 50px 0px;
 }
+
+

@@ -1,12 +1,14 @@
 {
   "Home": "Willkommen bei The Multiverse!",
+  "SWEETS": "SÜßIGKEITEN",
+  "COFFEE": "KAFFEE",
   "KONTAKT": "KONTAKT",
   "COFFEE": "KAFFEE",
   "SWEETS": "SÜßIGKEITEN",
   "MAP": "KARTE",
   "ABOUT": "ÜBER UNS",
   "WELCOME": "Willkommen bei The Multiverse!",
-  "WELCOME_TEXT": "Süßigkeiten, Kaffee oder beides? Wir haben Süßigkeiten aus Schweden, einige Süßigkeiten aus Japan, denn, warum nicht?! Wenn du gerne deine eigene Tüte machst, dann ist Pick'N'Mix genau das Richtige für dich. Wenn du lieber schon fertige Tüten magst,haben wir auch die! Wir arbeiten an einem Webshop für Sie, bitte haben Sie etwas Geduld!",
+    "WELCOME_TEXT": "Willkommen im Multiversum. Hier findest Du Süßigkeiten, Kaffee, und Getränke. Wir haben Süßigkeiten aus Skandinavien und Amerika. Wenn Du dine eigene Bonbontüte herstellen möchten, ist pick'n'mix genau das Richtige für dich. Wenn Du vorgefertigte Taschen bevorzugen, haben wir auch das.",
   "OPENING_TIMES": "ÖFFNUNGSZEITEN – LADEN",
   "Monday": "Montag",
   "Friday": "Freitag",
@@ -21,5 +23,5 @@
   "subject": "Geben Sie Ihren Betreff ein",
   "message": "Ihre Nachricht eingeben",
   "submit": "Senden",
-  "contact_message": "Bitte, wenn Sie Fragen zum Shop haben, kontaktieren Sie uns bitte hier!"
+  "contact_message": "Bitte, wenn Sie Fragen zum Shop haben, kontaktieren Sie uns bitte hier"
 }
