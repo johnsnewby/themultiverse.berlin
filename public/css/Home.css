@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
 
-
 body {
     background-color: black;
     height: 100%;
@@ -41,8 +40,6 @@ body {
 
 
 @media screen and (max-width: 2000px) and (min-width: 600px) {
-
-
     .top-header {
         position: fixed;
         top: 0;
@@ -86,7 +83,7 @@ body {
         height: 100%;
     }
 
-    .infomation {
+    .information {
        left: 0;
        top: 350px;
     }
@@ -95,7 +92,7 @@ body {
 @media screen and (min-width: 1155px) {
 
 
-    .infomation {
+    .information {
         left: 18%;
         top: 800px;
     }
@@ -110,7 +107,7 @@ body {
 
 
 
-.infomation {
+.information {
     font-size: 22px;
     color: rgb(238,230,230);
     display: flex;
@@ -124,7 +121,7 @@ body {
 
 
 
-.infomation > div {
+.information > div {
     margin-right: 40px;
     margin-left: 40px;
     min-width: 25ch;
@@ -140,7 +137,7 @@ body {
 }
 
 
-.infomation p  {
+.information p  {
     width: auto;
     display: flex;
     flex-wrap: wrap;
@@ -339,11 +336,11 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
     }
 
 
-    .infomation {
+    .information {
         font-size: 20px;
     }
 
-    .infomation > div {
+    .information > div {
         margin-right: 0;
         margin-left: 10px;
     }
@@ -463,5 +460,3 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
     font-size: 1.5rem;
     padding: 50px 0px;
 }
-
-

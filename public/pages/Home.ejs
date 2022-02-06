@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= lang %>">
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <meta charset="utf-8">
@@ -16,11 +16,9 @@
             <div class="top-header-right" id="nav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <p onclick="smoothScroll(infomation)"><%=t.ABOUT %></p>
-		<p onclick="smoothScroll(coffee)"><%=t.COFFEE %></p>
 		<p onclick="smoothScroll(sweets)"><%=t.SWEETS %></p>
+		<p onclick="smoothScroll(coffee)"><%=t.COFFEE %></p>
                 <p onclick="smoothScroll(map)"><%=t.MAP %></p>
-                <!-- <p onclick="smoothScroll(Sweets)"><%=t.SWEETS %></p> -->
-                <p onclick="smoothScroll(Coffee)"><%=t.COFFEE %></p>
                 <p onclick="smoothScroll(cf)"><%=t.KONTAKT %></p>
                 <div class="flags">
                     <p onclick="window.location='?clang=de'"><img src="img/de.png" width="30"/></p>
@@ -44,22 +42,21 @@
 	      },
 	      "type": "opt-out",
 	      "onStatusChange": (status, chosenBefore) => {
-		  if ( status != 'accept' ) { return; }		  
+		  if ( status != 'accept' ) { return; }
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 		  gtag('config', 'G-1E7C0D6B5Y');
 	      }
 	  });
-	</script>	
-    </body>
+	</script>
     <div class="TheMVContainer">
         <img src="img/TheMultiVerse-black-resized.jpg" alt="TheMV" id="TheMV">
     </div>
 
-    <div class="infomation" id="infomation">
+    <div class="information" id="information">
         <div class="about-us">
-          <p><h1><%=t.ABOUT%></h1><%=t.WELCOME%><p/>
+          <p><h1><%=t.ABOUT%></h1><%=t.WELCOME%><p>
                 <%- include("about-" + lang + ".ejs") %></p>
         </div>
         <div class="other-info">
@@ -75,16 +72,28 @@
                 <br>
                 10249 Berlin</p>
         </div>
-    <div class="coffee" id="coffee">
 
-	  <div class="coffee-left" id="coffee-left">
-	    <h1>Coffee</h1>
-	  </div>
-	  <div class="coffee-right" id="coffee-right">
-	    <img src="img/coffeemaschine.jpeg"/>
-	  </div>
-	</div>
 
+        <div id="sweets">
+            <div id="left">
+                <h1><%= t.SWEETS %></h1>
+                <%- include('sweets-' + lang + '.ejs') %>
+            </div>
+            <div id="right">
+                <img src="img/sweets.jpeg" width="600" alt="Sweets">
+            </div>
+        </div>
+
+        <div id="coffee">
+            <div id="left">
+                <h1><%= t.COFFEE %></h1>
+                <img src="img/coffeemaschine.jpeg" alt="Coffee" id="Coffeeimg">
+            </div>
+            <div id="right">
+                <%- include('coffee-' + lang) %>
+
+            </div>
+        </div>
 
         <div class="map" id="map">
           <h1><%=t.find_us%></h1>
@@ -96,58 +105,20 @@
             </div>
           </div>
         </div>
-<!--
-        <div id="Sweets">
-            <div id="left">
-                <h1>Sweets</h1>
-                <%- include('sweets-' + lang + '.ejs') %>
-            </div>
-            <div id="right">
-                <img src="img/Sweets.jpg" alt="Sweets">
-            </div>
-        </div>
--->
-        <div id="Coffee">
-            <div id="left">
-                <h1><%= t.COFFEE %></h1>
-                <%- include('coffee-' + lang) %>
-            </div>
-            <div id="right">
-                <img src="img/coffeemaschine.jpeg" alt="Coffee" id="Coffeeimg">
-
-            </div>
-        </div>
 
         <div class="contact-form" id="cf">
-
-            <div class="contact-form-left" id="contact-form-left">
-                          <h1><%=t.KONTAKT%></h1>
-                <form action="" class="form-left" id="contact-form">
-                    <span class="name"><%=t.first_name%> *</span>
-
-                    <input type="text" name="name" required="true">
-                    <span class="surname"><%=t.surname%> *</span>
-                    <input type="text" name="surname" required="true">
-                    <span class="email"><%=t.email%> *</span>
-                    <input type="email" name="Email" required="true">
-                    <span class="subject"><%=t.subject%></span>
-                    <input type="text" name="subject">
-                    <span class="message"><%=t.message%></span>
-                    <textarea name="Message"></textarea>
-                    <input type="submit" value="<%=t.submit%>" class="send">
-
-                </form>
+          <div class="contact-form-left" id="contact-form-left">
+            <h1><%=t.KONTAKT%></h1>
+                <p><%= t.contact_message %></p>
             </div>
             <div class="contact-form-right" id="contact-form-right">
-                <p><%= t.contact_message %></p>
                 <p>themultiverse.berlin [at] gmail.com</p>
             </div>
         </div>
     </div>
 
-
-
     <div class="footer" id="footer">
         <p>© 2021 by The Multiverse <a href="/pages/impressum.html">impressum</a></p>
     </div>
+    </body>
 </html>

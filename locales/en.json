@@ -8,7 +8,7 @@
   "COFFEE": "COFFEE",
   "KONTAKT": "CONTACT",
   "WELCOME": "Welcome to The Multiverse!",
-  "WELCOME_TEXT": "Welcome to, The Multiverse. Here you will find sweets, coffee, and drinks. We offer sweets from Scandinavia and America. If you like to make your own candy bag then pick'n'mix is for you. If you prefer ready-made bags, we have that too.", 
+  "WELCOME_TEXT": "Welcome to, The Multiverse. Here you will find sweets, coffee, and drinks. We offer sweets from Scandinavia and America. If you like to make your own candy bag then pick'n'mix is for you. If you prefer ready-made bags, we have that too.",
   "OPENING_TIMES": "OPENING TIMES",
   "Monday": "Monday",
   "Friday": "Friday",
@@ -23,5 +23,5 @@
   "subject": "Subject",
   "message": "Your message",
   "submit": "Send",
-  "contact_message": "Please contact us here with any enquiries"
+  "contact_message": "Please contact us by email with any enquiries"
 }

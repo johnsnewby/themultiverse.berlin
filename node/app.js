@@ -18,13 +18,13 @@ const transporter = nodemailer.createTransport({
 });
 
 // verify connection configuration
-// transporter.verify(function (error, success) {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log("SMTP server " + mailer + " is ready to take our messages");
-//   }
-// });
+transporter.verify(function (error, success) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("SMTP server " + mailer + " is ready to take our messages");
+  }
+});
 
 app.use(express.static(path.join(__dirname, '../public')));
 
