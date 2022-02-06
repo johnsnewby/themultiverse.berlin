@@ -157,6 +157,17 @@ body {
     position: absolute;
 }
 
+.coffee {
+    top: 150%;
+    left: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: absolute;
+}
+
 .form-left {
     max-width: 500px;
     display: flex;
@@ -184,6 +195,30 @@ body {
 }
 
 .contact-form-right p {
+    font-size: 22px;
+    letter-spacing: 0.05em;
+}
+
+.coffee-left {
+    min-width: 25ch;
+    flex: 1 1 50%;
+}
+
+.coffee-right {
+    flex: 1 1 30%;
+    margin-top: 80px;
+}
+
+.coffee-right > * {
+    line-height: 1.4em;
+}
+
+.coffee-right h1 {
+    font-size: 50px;
+    letter-spacing: 0.1em;
+}
+
+.coffee-right p {
     font-size: 22px;
     letter-spacing: 0.05em;
 }
