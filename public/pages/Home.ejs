@@ -90,8 +90,11 @@
     <div id="coffee" class="pagefont flowdown fullwidth">
       <h1><%= t.COFFEE %></h1>
       <div class="flowleft fullwidth">
-        <div class="sixty"><img src="img/coffeemaschine.jpeg" alt="Coffee" id="Coffeeimg" class="fullwidth"></div>
-        <div class="forty"><%- include('coffee-' + lang) %></div>
+        <div class="forty"><img src="img/coffeemaschine.jpeg" alt="Coffee" id="Coffeeimg" class="fullwidth"></div>
+        <div class="sixty">
+          <%- include('coffee-' + lang) %>
+          <div class="forty"><img src="img/coffee.jpeg" alt="cup of coffee" width="400"></div>
+        </div>
       </div>
     </div>
 
