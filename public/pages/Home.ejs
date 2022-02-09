@@ -19,11 +19,10 @@
                 <p onclick="smoothScroll(sweets)"><%=t.SWEETS %></p>
                 <p onclick="smoothScroll(coffee)"><%=t.COFFEE %></p>
                 <p onclick="smoothScroll(map)"><%=t.MAP %></p>
-                <p onclick="smoothScroll(cf)"><%=t.KONTAKT %></p>
                 <div class="flags">
-                    <p onclick="window.location='?clang=de'"><img src="img/de.png" width="30"/></p>
-                    <p onclick="window.location='?clang=se'"><img src="img/se.png" width="30"></p>
-                    <p onclick="window.location='?clang=en'"><img src="img/en.png" width="30"></p>
+                    <p onclick="window.location='?clang=de'"><img src="img/de.png" width="30" alt="deutsch"/></p>
+                    <p onclick="window.location='?clang=se'"><img src="img/se.png" width="30" alt="svenska"></p>
+                    <p onclick="window.location='?clang=en'"><img src="img/en.png" width="30" alt="english"></p>
                 </div>
             </div>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="open">&#9776;</span>
@@ -87,7 +86,7 @@
       </div>
     </div>
 
-    <div id="coffee" class="pagefont flowdown fullwidth">
+    <div id="coffee" class="pagefont flowdown fullwidth padded">
       <h1><%= t.COFFEE %></h1>
       <div class="flowleft fullwidth">
         <div class="forty padded"><img src="img/coffee.jpeg" alt="cup of coffee" class="fullwidth"></div>
@@ -98,7 +97,7 @@
       </div>
     </div>
 
-        <div class="flowdown pagefont" id="map">
+    <div class="flowdown pagefont padded" id="map">
           <h1><%=t.find_us%></h1>
           <div class="mapouter">
             <div class="gmap_canvas">
