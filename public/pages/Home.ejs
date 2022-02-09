@@ -62,7 +62,7 @@
         <div class="other-info">
             <p>            <%=t.OPENING_TIMES%>
                 <br>
-                <%=t.Monday%> – <%=t.Friday%> <%=t.from%> 12 <%=t.to%> 19 <%=t.oclock%>
+                <%=t.Monday%>,<%=t.Tuesday%>,<%=t.Thursday%>,<%=t.Friday%> <%=t.from%> 12 <%=t.to%> 19 <%=t.oclock%>
                 <br>
                 <%=t.Saturday%> <%=t.from%> 13 <%=t.to%> 18 <%=t.oclock%>
                 <br>
@@ -85,13 +85,12 @@
         </div>
 
         <div id="coffee">
-            <div id="left">
-                <h1><%= t.COFFEE %></h1>
-                <img src="img/coffeemaschine.jpeg" alt="Coffee" id="Coffeeimg">
+          <h1><%= t.COFFEE %></h1>
+            <div id="coffee-left">
+              <img src="img/coffeemaschine.jpeg" alt="Coffee" id="Coffeeimg">
             </div>
-            <div id="right">
-                <%- include('coffee-' + lang) %>
-
+            <div id="coffee-right">
+              <%- include('coffee-' + lang) %>
             </div>
         </div>
 
