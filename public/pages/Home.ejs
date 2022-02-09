@@ -56,10 +56,10 @@
 
     <div class="information" id="information">
         <div class="pagefont flowdown">
-          <p><h1><%=t.ABOUT%></h1><%=t.WELCOME%><p>
+          <div class="padded"><h1><%=t.ABOUT%></h1></div>
             <div class="flowleft">
-              <div class="sixty"><%- include("about-" + lang + ".ejs") %></div>
-              <div>
+              <div class="sixty padded"><h2><%=t.WELCOME%></h2><p><%- include("about-" + lang + ".ejs") %></div>
+              <div class="padded">
                 <%=t.OPENING_TIMES%>
                 <br>
                 <%=t.Monday%> – <%=t.Friday%> <%=t.from%> 12 <%=t.to%> 19 <%=t.oclock%>
@@ -77,9 +77,9 @@
     </div>
 
     <div id="sweets" class="pagefont flowdown">
-      <h1><%= t.SWEETS %></h1>
+      <div class="padded"><h1><%= t.SWEETS %></h1></div>
       <div id="container" class="flowleft">
-        <div id="left">
+        <div id="left" class="padded">
           <%- include('sweets-' + lang + '.ejs') %>
         </div><div id="right">
           <img src="img/sweets.jpeg" width="600" alt="Sweets">
@@ -90,10 +90,10 @@
     <div id="coffee" class="pagefont flowdown fullwidth">
       <h1><%= t.COFFEE %></h1>
       <div class="flowleft fullwidth">
-        <div class="forty"><img src="img/coffeemaschine.jpeg" alt="Coffee" id="Coffeeimg" class="fullwidth"></div>
-        <div class="sixty">
+        <div class="forty padded"><img src="img/coffee.jpeg" alt="cup of coffee" class="fullwidth"></div>
+        <div class="sixty padded">
           <%- include('coffee-' + lang) %>
-          <div class="forty"><img src="img/coffee.jpeg" alt="cup of coffee" width="400"></div>
+          <div class="forty"><img src="img/coffeemaschine.jpeg" alt="Coffee" id="Coffeeimg" class="fullwidth"></div>
         </div>
       </div>
     </div>

@@ -29,6 +29,10 @@ body {
     width: 100%;
 }
 
+.fullheight {
+    height: 100%;
+}
+
 .sixty {
     width: 60%;
 }
@@ -39,6 +43,10 @@ body {
 
 .fiddy {
     width: 50%;
+}
+
+.padded {
+    margin: 2%;
 }
 
 .top-header-right p {
