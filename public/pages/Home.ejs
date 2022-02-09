@@ -7,7 +7,7 @@
         <title><%=t.Home%></title>
         <link rel="stylesheet" href="css/Home.css">
         <script src='scripts/Home.js' defer></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     </head>
 
     <body>
@@ -16,51 +16,50 @@
             <div class="top-header-right" id="nav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <p onclick="smoothScroll(information)"><%=t.ABOUT %></p>
-		<p onclick="smoothScroll(sweets)"><%=t.SWEETS %></p>
-		<p onclick="smoothScroll(coffee)"><%=t.COFFEE %></p>
+                <p onclick="smoothScroll(sweets)"><%=t.SWEETS %></p>
+                <p onclick="smoothScroll(coffee)"><%=t.COFFEE %></p>
                 <p onclick="smoothScroll(map)"><%=t.MAP %></p>
-                <p onclick="smoothScroll(cf)"><%=t.KONTAKT %></p>
                 <div class="flags">
-                    <p onclick="window.location='?clang=de'"><img src="img/de.png" width="30"/></p>
-                    <p onclick="window.location='?clang=se'"><img src="img/se.png" width="30"></p>
-                    <p onclick="window.location='?clang=en'"><img src="img/en.png" width="30"></p>
+                    <p onclick="window.location='?clang=de'"><img src="img/de.png" width="30" alt="deutsch"/></p>
+                    <p onclick="window.location='?clang=se'"><img src="img/se.png" width="30" alt="svenska"></p>
+                    <p onclick="window.location='?clang=en'"><img src="img/en.png" width="30" alt="english"></p>
                 </div>
             </div>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="open">&#9776;</span>
         </div>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1E7C0D6B5Y"></script>
-	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-	<script>
-	  var cc = window.cookieconsent.initialise({
-	      "palette": {
-		  "popup": {
-		      "background": "#000"
-		  },
-		  "button": {
-		      "background": "#f1d600"
-		  }
-	      },
-	      "type": "opt-out",
-	      "onStatusChange": (status, chosenBefore) => {
-		  if ( status != 'accept' ) { return; }
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		  gtag('config', 'G-1E7C0D6B5Y');
-	      }
-	  });
-	</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E7C0D6B5Y"></script>
+        <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+        <script>
+          var cc = window.cookieconsent.initialise({
+              "palette": {
+                  "popup": {
+                      "background": "#000"
+                  },
+                  "button": {
+                      "background": "#f1d600"
+                  }
+              },
+              "type": "opt-out",
+              "onStatusChange": (status, chosenBefore) => {
+                  if ( status != 'accept' ) { return; }
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-1E7C0D6B5Y');
+              }
+          });
+        </script>
     <div class="TheMVContainer">
         <img src="img/TheMultiVerse-black-resized.jpg" alt="TheMV" id="TheMV">
     </div>
 
     <div class="information" id="information">
-        <div class="about-us">
-          <p><h1><%=t.ABOUT%></h1><%=t.WELCOME%><p>
-                <%- include("about-" + lang + ".ejs") %></p>
-        </div>
-        <div class="other-info">
-            <p>            <%=t.OPENING_TIMES%>
+        <div class="pagefont flowdown">
+          <div class="padded"><h1><%=t.ABOUT%></h1></div>
+            <div class="flowleft">
+              <div class="sixty padded"><h2><%=t.WELCOME%></h2><p><%- include("about-" + lang + ".ejs") %></div>
+              <div class="padded">
+                <%=t.OPENING_TIMES%>
                 <br>
                 <%=t.Monday%>,<%=t.Tuesday%>,<%=t.Thursday%>,<%=t.Friday%> <%=t.from%> 12 <%=t.to%> 19 <%=t.oclock%>
                 <br>
@@ -71,30 +70,34 @@
                 Ebertystr. 24
                 <br>
                 10249 Berlin</p>
+          </div>
+          </div>
         </div>
+    </div>
 
-
-        <div id="sweets">
-            <div id="left">
-                <h1><%= t.SWEETS %></h1>
-                <%- include('sweets-' + lang + '.ejs') %>
-            </div>
-            <div id="right">
-                <img src="img/sweets.jpeg" width="600" alt="Sweets">
-            </div>
+    <div id="sweets" class="pagefont flowdown">
+      <div class="padded"><h1><%= t.SWEETS %></h1></div>
+      <div id="container" class="flowleft">
+        <div id="left" class="padded">
+          <%- include('sweets-' + lang + '.ejs') %>
+        </div><div id="right">
+          <img src="img/sweets.jpeg" width="600" alt="Sweets">
         </div>
+      </div>
+    </div>
 
-        <div id="coffee">
-          <h1><%= t.COFFEE %></h1>
-            <div id="coffee-left">
-              <img src="img/coffeemaschine.jpeg" alt="Coffee" id="Coffeeimg">
-            </div>
-            <div id="coffee-right">
-              <%- include('coffee-' + lang) %>
-            </div>
+    <div id="coffee" class="pagefont flowdown fullwidth padded">
+      <h1><%= t.COFFEE %></h1>
+      <div class="flowleft fullwidth">
+        <div class="forty padded"><img src="img/coffee.jpeg" alt="cup of coffee" class="fullwidth"></div>
+        <div class="sixty padded">
+          <%- include('coffee-' + lang) %>
+          <div class="forty"><img src="img/coffeemaschine.jpeg" alt="Coffee" id="Coffeeimg" class="fullwidth"></div>
         </div>
+      </div>
+    </div>
 
-        <div class="map" id="map">
+    <div class="flowdown pagefont padded" id="map">
           <h1><%=t.find_us%></h1>
           <div class="mapouter">
             <div class="gmap_canvas">
@@ -105,19 +108,10 @@
           </div>
         </div>
 
-        <div class="contact-form" id="cf">
-          <div class="contact-form-left" id="contact-form-left">
-            <h1><%=t.KONTAKT%></h1>
-                <p><%= t.contact_message %></p>
-            </div>
-            <div class="contact-form-right" id="contact-form-right">
-                <p>themultiverse.berlin [at] gmail.com</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer" id="footer">
+    <div class="pagefont">
         <p>© 2021 by The Multiverse <a href="/pages/impressum.html">impressum</a></p>
     </div>
+
+
     </body>
 </html>
