@@ -10,6 +10,36 @@ body {
     z-index: 3;
 }
 
+.pagefont {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: white;
+}
+
+.flowdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.flowleft {
+    display: flex;
+    flex-direction: row;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.sixty {
+    width: 60%;
+}
+
+.forty {
+    width: 40%;
+}
+
+.fiddy {
+    width: 50%;
+}
 
 .top-header-right p {
     display: inline-block;
@@ -27,7 +57,6 @@ body {
 }
 
 .TheMVContainer {
-    position: absolute;
     top: 11%;
     left: 0;
     width: 100%;
@@ -104,28 +133,17 @@ body {
     }
 }
 
-
-
-
 .information {
-    font-size: 22px;
     color: rgb(238,230,230);
     display: flex;
     flex-wrap: wrap;
     height: auto;
-    position: absolute;
     flex-direction: row;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 
 
-
-.information > div {
-    margin-right: 40px;
-    margin-left: 40px;
-    min-width: 25ch;
-}
 
 .about-us {
     letter-spacing: 0.05em;
@@ -377,43 +395,28 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
     }
 }
 
-
-
-#Sweets {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    top: 110%;
-    left: 0;
+#sweets {
 }
 
-#Coffee {
+#sweets #container {
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+#coffee {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     background-color: black;
-    position: absolute;
     top: 150%;
     left: 0;
 }
 
-#Sweets #right {
+#coffee #right {
     flex: 1 1 30%;
 }
 
-#Sweets #left {
-    flex: 1 1 30%;
-    margin-right: 80px;
-}
-
-#Coffee #right {
-    flex: 1 1 30%;
-}
-
-#Coffee #left {
+#coffee #left {
     flex: 1 1 30%;
     margin-right: 150px;
 }
@@ -442,21 +445,4 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
         margin-top: 10px;
         margin-bottom: 10px;
     }
-}
-
-
-.footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: auto;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(162,156,156);
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 1.5rem;
-    padding: 50px 0px;
 }
