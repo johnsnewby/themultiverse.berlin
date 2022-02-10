@@ -45,6 +45,11 @@ body {
     width: 50%;
 }
 
+.maxheight {
+    max-height: 400px;
+
+}
+
 .padded {
     margin: 2%;
 }
@@ -318,7 +323,8 @@ body {
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
+    display: flex;
+    justify-content: center;
 }
 
 /* Next & previous buttons */
