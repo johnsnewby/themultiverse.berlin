@@ -1,30 +1,4 @@
-function getCoords() {
-    var element = document.getElementById('TheMV');
-    var position = element.getBoundingClientRect();
-    var y = position.bottom + window.scrollY;
-    document.getElementById('infomation').style.top = y + 50 + 'px';
-}
-
-var resizeObserver = new ResizeObserver(function (entries) {
-    entries.forEach(function (entry) {
-        getCoords();
-    });
-});
-resizeObserver.observe(document.getElementById('TheMV'));
-
-document.addEventListener('keydown', function (e) {
-    if (e.key === "F12") {
-        getCoords();
-    }
-});
-
 function footerResize() {
-    var element = document.getElementById('contact-form-right');
-    var position = element.getBoundingClientRect();
-    var y = position.bottom + window.scrollY;
-    var element2 = document.getElementById('contact-form-left');
-    var position2 = element2.getBoundingClientRect();
-    var y2 = position2.bottom + window.scrollY;
     var footer = document.getElementById('footer');
     if (y > y2) {
         footer.style.top = y + 80 + 'px';
@@ -34,12 +8,6 @@ function footerResize() {
 
 }
 window.addEventListener('resize', footerResize);
-
-
-
-
-
-
 
 function smoothScroll(div) {
     closeNav();
@@ -60,14 +28,6 @@ function smoothScroll(div) {
 document.body.style.zoom="100%"
 
 
-window.onload = function () {
-    document.getElementById('footer').style.display = 'none';
-    setTimeout(function () {
-        footerResize();
-        document.getElementById('footer').style.display = 'flex';
-    }, 2);
-}
-
 function openNav() {
     document.body.style.overflow = 'hidden';
     document.getElementById("nav").style.width = "100%";
@@ -79,22 +39,32 @@ function closeNav() {
 }
 
 
+var slideIndex = 1;
+
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
 
 
-const form = document.getElementById("contact-form");
-
-const formEvent = form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let mail = new FormData(form);
-  sendMail(mail);
-});
-
-const sendMail = (mail) => {
-  fetch("/mail", {
-    method: "post",
-    body: mail,
-  }).then((response) => {
-    return response;
-  });
-};
-
+var slideIndex = 0;
+showSlides();
