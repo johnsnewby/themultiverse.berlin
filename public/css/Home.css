@@ -228,19 +228,12 @@ body {
 
     .information {
         font-size: 20px;
+        margin-right: 5%;
     }
 
     .information > div {
-        margin-right: 0;
+        margin-right: 5%;
         margin-left: 10px;
-    }
-
-    .contact-form-right p {
-        font-size: 20px;
-    }
-
-    .contact-form-right h1 {
-        font-size: 30px;
     }
 
     .flags img {
