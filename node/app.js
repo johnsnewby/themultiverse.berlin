@@ -6,25 +6,7 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 
 const app = express();
-const mailer = process.env.MAILHOST || 'localhost';
 const port = process.env.PORT || 3000;
-
-const transporter = nodemailer.createTransport({
-  host: mailer, //replace with your email provider
-  port: 25,
-   tls: {
-     rejectUnauthorized: false // TODO: maybe remove in prod?
-   }
-});
-
-// verify connection configuration
-transporter.verify(function (error, success) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("SMTP server " + mailer + " is ready to take our messages");
-  }
-});
 
 app.use(express.static(path.join(__dirname, '../public')));
 
