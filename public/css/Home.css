@@ -293,14 +293,6 @@ body {
     margin-right: 150px;
 }
 
-#Coffee #Coffeeimg {
-    position: relative;
-    top: 60%;
-    transform: translateY(-50%);
-    width: 100%;
-
-}
-
 @media screen and (max-width: 1040px) {
 
     #Coffee {

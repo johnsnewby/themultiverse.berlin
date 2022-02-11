@@ -1,5 +1,6 @@
 const express = require('express');
 var favicon = require('serve-favicon');
+const fs = require('fs');
 const i18n = require('i18n-express');
 const multiparty = require("multiparty");
 const nodemailer = require('nodemailer');
@@ -22,6 +23,10 @@ app.use('/js', express.static(path.join(__dirname + '../public/scripts')));
 app.use('/img', express.static(path.join(__dirname + '../public/img')));
 //app.use(favicon(path.join(__dirname,'../public','img','favicon.ico')));
 
+var coffee_images = [];
+fs.readdir("../public/img/coffee", function(err, files) {
+  coffee_images = files;
+});
 
 app.set('views', path.join(__dirname, '../public/pages'));
 app.set('view engine', 'ejs');
@@ -33,32 +38,8 @@ app.listen(
 
 app.get(`/`, (req, res) => {
   console.log("get /");
-  res.render('Home');
-});
-
-app.post('/mail', (req, res) => {
-  let form = new multiparty.Form();
-  let data = {};
-  form.parse(req, function (err, fields) {
-    console.log(fields);
-    Object.keys(fields).forEach(function (property) {
-      data[property] = fields[property].toString();
-    });
-
-    const mail = {
-      from: data.name,
-      to: process.env.EMAIL || 'john@newby.org',
-      subject: 'Mail from ${data.name} ${data.surname}',
-      text: 'foo'
-    };
-
-    transporter.sendMail(mail, (err, data) => {
-      if (err) {
-        console.log(err);
-        res.status(500).send("Something went wrong.");
-      } else {
-        res.status(200).send("Email successfully sent to recipient!");
-      }
-    });
-  });
+  res.render('Home', {
+    coffee_images: coffee_images
+  }
+  );
 });
