@@ -55,7 +55,7 @@ body {
     margin: 2%;
 }
 
-.right-margin: {
+.right-margin {
     padding-right: 5%;
 }
 
@@ -151,16 +151,10 @@ body {
     }
 }
 
-.information {
-}
-
 .other-info {
     flex: 20%;
 }
 
-.coffee {
-
-}
 
 @media screen and (max-width: 600px) {
 
@@ -270,9 +264,6 @@ body {
     }
 }
 
-#sweets {
-
-}
 
 #sweets #container {
     width: 100%;
