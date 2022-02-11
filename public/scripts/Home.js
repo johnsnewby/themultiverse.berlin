@@ -1,14 +1,3 @@
-function footerResize() {
-    var footer = document.getElementById('footer');
-    if (y > y2) {
-        footer.style.top = y + 80 + 'px';
-    } else {
-        footer.style.top = y2 + 80 + 'px';
-    }
-
-}
-window.addEventListener('resize', footerResize);
-
 function smoothScroll(div) {
     closeNav();
     var element = document.getElementById(div.id);

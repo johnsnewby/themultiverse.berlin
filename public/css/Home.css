@@ -55,6 +55,10 @@ body {
     margin: 2%;
 }
 
+.right-margin: {
+    padding-right: 5%;
+}
+
 .top-header-right p {
     display: inline-block;
     text-align: center;
@@ -284,15 +288,6 @@ body {
     left: 0;
 }
 
-#coffee #right {
-    flex: 1 1 30%;
-}
-
-#coffee #left {
-    flex: 1 1 30%;
-    margin-right: 150px;
-}
-
 @media screen and (max-width: 1040px) {
 
     #Coffee {
@@ -300,10 +295,6 @@ body {
     }
 
 }
-
-
-
-
 
 * {box-sizing:border-box}
 
