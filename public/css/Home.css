@@ -305,6 +305,12 @@ body {
     justify-content: center;
 }
 
+/* Hide the images by default */
+.gallerySlides {
+    display: flex;
+    justify-content: center;
+}
+
 
 
 /* Next & previous buttons */

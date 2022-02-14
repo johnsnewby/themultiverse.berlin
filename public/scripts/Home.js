@@ -29,8 +29,10 @@ function closeNav() {
 
 
 var slideIndexes = new Map([
-    ["sweets", 0],
-    ["coffee", 0]]);
+  ["sweets", 0],
+  ["coffee", 0],
+  ["gallery", 0]
+]);
 
 var timeOutIndexes = new Map();
 
@@ -65,3 +67,4 @@ function showSlides(type, increment = 1, auto = true) {
 var slideIndex = 0;
 showSlides("coffee");
 showSlides("sweets");
+showSlides("gallery");

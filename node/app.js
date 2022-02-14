@@ -32,33 +32,40 @@ function filenamesWithAlts(files) {
 	    'alt': file.split('.')[0] });
 
     }
-    return list;
+  return list;
 }
+
+app.set('views', path.join(__dirname, '../public/pages'));
+app.set('view engine', 'ejs');
+
 
 var coffee_images = [];
 fs.readdir("../public/img/coffee", function(err, files) {
     coffee_images = filenamesWithAlts(files);
 });
 
-var sweets_image = [];
+var sweets_images = [];
 fs.readdir("../public/img/sweets", function(err, files) {
     sweets_images = filenamesWithAlts(files);
 });
 
-
-app.set('views', path.join(__dirname, '../public/pages'));
-app.set('view engine', 'ejs');
+var gallery_images = [];
+fs.readdir("../public/img/gallery", function(err, files) {
+    gallery_images = filenamesWithAlts(files);
+});
 
 app.listen(
   port,
   () => console.log('Server started on port ' + port)
 )
 
+
 app.get(`/`, (req, res) => {
   console.log("get /");
   res.render('Home', {
-      coffee_images: coffee_images.sort((a, b) => 0.5 - Math.random()),
-      sweets_images: sweets_images.sort((a, b) => 0.5 - Math.random())
+    coffee_images: coffee_images.sort((a, b) => 0.5 - Math.random()),
+    sweets_images: sweets_images.sort((a, b) => 0.5 - Math.random()),
+    gallery_images: gallery_images.sort((a, b) => 0.5 - Math.random())
   }
   );
 });
