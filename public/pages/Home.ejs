@@ -79,11 +79,11 @@
     <div id="sweets" class="pagefont flowdown fullwidth padded">
       <div class="flowleft padded"><h1><%= t.SWEETS %></h1></div>
       <div class="flowleft">
-	<div id="container" class="sixty">
+	<div id="container" class="fifty">
           <%- include('sweets-' + lang + '.ejs') %>
 	</div>
 
-	<div id="sweets-slideshow" class="forty padded slideshow-container">
+	<div id="sweets-slideshow" class="fifty padded slideshow-container">
 	  <% for (var i = 0; i < sweets_images.length; i++) { %>
              <div class="sweetsSlides fade">
                <img src="img/sweets/<%=sweets_images[i].filename%>"  alt="<%=sweets_images[i].alt%>" class="maxheight">
@@ -132,14 +132,14 @@
     <div class="flowdown pagefont padded" id="map">
       <h1><%=t.find_us%></h1>
       <div class="flowleft fullwidth">
-        <div class="mapouter sixty">
+        <div class="mapouter forty">
           <div class="gmap_canvas">
             <iframe height="546" id="gmap_canvas" src="https://maps.google.com/maps?q=The%20Multiverse,%20Ebertystra%C3%9Fe%2024,%20Berlin&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             <br>
             <style>.mapouter{position:relative;text-align:left;height:546px;}</style><a href="https://www.embedgooglemap.net">embed google maps in gmail</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:546px;}</style>
             </div>
 	  </div>
-	  <div class="forty">
+	  <div class="forty padded">
           <%- include('directions-' + lang) %>
 	  </div>
       </div>
