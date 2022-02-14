@@ -47,7 +47,6 @@ function showSlides(type, increment = 1, auto = true) {
     slideIndex += increment;
     if (slideIndex >= slides.length) {slideIndex = 0}
     if (slideIndex < 0 ) { slideIndex = slides.length - 1 }
-    console.log(slideIndex);
 
     slides[slideIndex].style.display = "block";
     if(auto) {
