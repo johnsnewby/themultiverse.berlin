@@ -85,7 +85,7 @@
 	<div id="sweets-slideshow" class="forty padded slideshow-container">
 	  <% for (var i = 0; i < sweets_images.length; i++) { %>
              <div class="sweetsSlides fade">
-               <img src="img/sweets/<%=sweets_images[i]%>" class="maxheight">
+               <img src="img/sweets/<%=sweets_images[i].filename%>"  alt="<%=sweets_images[i].alt%>" class="maxheight">
              </div>
 	     <% } %>
              <!-- Next and previous buttons -->
@@ -101,7 +101,7 @@
         <div class="forty padded slideshow-container">
 	  <% for (var i = 0; i < coffee_images.length; i++) { %>
              <div class="coffeeSlides fade">
-               <img src="img/coffee/<%=coffee_images[i]%>" class="maxheight">
+               <img src="img/coffee/<%=coffee_images[i].filename%>" alt="<%=coffee_images[i].alt%>" class="maxheight">
           </div>
 	     <% } %>
              <!-- Next and previous buttons -->

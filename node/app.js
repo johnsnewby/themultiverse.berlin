@@ -24,15 +24,25 @@ app.use('/js', express.static(path.join(__dirname + '../public/scripts')));
 app.use('/img', express.static(path.join(__dirname + '../public/img')));
 //app.use(favicon(path.join(__dirname,'../public','img','favicon.ico')));
 
+function filenamesWithAlts(files) {
+    list = [];
+    for (const file of files) {
+	list.push({
+	    'filename': file,
+	    'alt': file.split('.')[0] });
+
+    }
+    return list;
+}
+
 var coffee_images = [];
 fs.readdir("../public/img/coffee", function(err, files) {
-  coffee_images = files;
+    coffee_images = filenamesWithAlts(files);
 });
 
 var sweets_image = [];
 fs.readdir("../public/img/sweets", function(err, files) {
-    sweets_images = files;
-    console.log(sweets_images);
+    sweets_images = filenamesWithAlts(files);
 });
 
 
@@ -47,8 +57,8 @@ app.listen(
 app.get(`/`, (req, res) => {
   console.log("get /");
   res.render('Home', {
-      coffee_images: coffee_images,
-      sweets_images: sweets_images
+      coffee_images: coffee_images.sort((a, b) => 0.5 - Math.random()),
+      sweets_images: sweets_images.sort((a, b) => 0.5 - Math.random())
   }
   );
 });
