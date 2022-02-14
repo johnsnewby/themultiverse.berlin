@@ -29,6 +29,13 @@ fs.readdir("../public/img/coffee", function(err, files) {
   coffee_images = files;
 });
 
+var sweets_image = [];
+fs.readdir("../public/img/sweets", function(err, files) {
+    sweets_images = files;
+    console.log(sweets_images);
+});
+
+
 app.set('views', path.join(__dirname, '../public/pages'));
 app.set('view engine', 'ejs');
 
@@ -40,7 +47,8 @@ app.listen(
 app.get(`/`, (req, res) => {
   console.log("get /");
   res.render('Home', {
-    coffee_images: coffee_images
+      coffee_images: coffee_images,
+      sweets_images: sweets_images
   }
   );
 });

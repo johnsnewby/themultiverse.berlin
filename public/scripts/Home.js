@@ -28,32 +28,40 @@ function closeNav() {
 }
 
 
-var slideIndex = 1;
+var slideIndexes = new Map([
+    ["sweets", 0],
+    ["coffee", 0]]);
 
-showSlides(slideIndex);
+var timeOutIndexes = new Map();
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+function showSlides(type, increment = 1, auto = true) {
+    var className = type + 'Slides';
+    var i;
+    var slides = document.getElementsByClassName(className);
+    slideIndex = slideIndexes.get(type);
+    for (i = 0; i < slides.length; i++) {
+	slides[i].style.display = "none";
+    }
+    slideIndex += increment;
+    if (slideIndex >= slides.length) {slideIndex = 0}
+    if (slideIndex < 0 ) { slideIndex = slides.length - 1 }
+    console.log(slideIndex);
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+    slides[slideIndex].style.display = "block";
+    if(auto) {
+	index =
+	    setTimeout(function() { showSlides(type, slideIndex + 1)}, 2000);
+	timeOutIndexes[type] = index;
+    } else {
+	index = timeOutIndexes[type];
+	if(index) {
+	    clearTimeout(index);
+	}
+    }
+    slideIndexes.set(type, slideIndex);
 }
 
 
 var slideIndex = 0;
-showSlides();
+showSlides("coffee");
+showSlides("sweets");

@@ -44,7 +44,7 @@ body {
 
 .maxheight {
     height: 400px;
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
 }
 
@@ -294,10 +294,18 @@ body {
 }
 
 /* Hide the images by default */
-.mySlides {
+.sweetsSlides {
     display: flex;
     justify-content: center;
 }
+
+/* Hide the images by default */
+.coffeeSlides {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 /* Next & previous buttons */
 .prev, .next {
