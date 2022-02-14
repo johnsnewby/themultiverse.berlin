@@ -28,7 +28,7 @@ function filenamesWithAlts(files) {
     list = [];
     for (const file of files) {
 	list.push({
-	    'filename': file,
+	    'filename': encodeURIComponent(file),
 	    'alt': file.split('.')[0] });
 
     }
