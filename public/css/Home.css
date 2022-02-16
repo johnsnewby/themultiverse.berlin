@@ -12,6 +12,7 @@ body {
 
 .pagefont {
     font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 14pt;
     color: white;
 }
 
@@ -20,7 +21,7 @@ body {
     flex-direction: column;
 }
 
-.flowleft {
+.flowappropriately {
     display: flex;
     flex-direction: row;
 }
@@ -84,7 +85,8 @@ body {
 
 
 @media screen and (max-width: 2000px) and (min-width: 600px) {
-    .top-header {
+
+.top-header {
         position: fixed;
         top: 0;
         left: 0;
@@ -120,7 +122,18 @@ body {
 
 
 @media screen and (max-width: 930px) and (min-width: 600px) {
+    .pagefont {
+	font-size: 12pt;
+    }
 
+    .flowappropriately {
+	display: flex;
+	flex-direction: column;
+    }
+
+    .sixty, .forty, .fifty {
+	width: 90%;
+    }
 
     #TheMV {
         width: 100%;
@@ -154,6 +167,19 @@ body {
 
 
 @media screen and (max-width: 600px) {
+    .pagefont {
+	font-size: 13px;
+    }
+
+    .flowappropriately {
+	display: flex;
+	flex-direction: column;
+    }
+
+    .sixty, .forty, .fifty {
+	width: 90%;
+    }
+
 
     #open {
         display: block;
@@ -265,23 +291,6 @@ body {
 #sweets #container {
     width: 100%;
     flex-wrap: nowrap;
-}
-
-#coffee {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: black;
-    top: 150%;
-    left: 0;
-}
-
-@media screen and (max-width: 1040px) {
-
-    #Coffee {
-        top: 135%
-    }
-
 }
 
 * {box-sizing:border-box}

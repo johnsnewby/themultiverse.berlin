@@ -57,7 +57,7 @@
     <div class="information right-margin" id="information">
         <div class="pagefont flowdown">
           <div class="padded"><h1><%=t.ABOUT%></h1></div>
-            <div class="flowleft">
+            <div class="flowappropriately">
               <div class="sixty padded"><h2><%=t.WELCOME%></h2><p><%- include("about-" + lang + ".ejs") %></div>
               <div class="padded">
                 <%=t.OPENING_TIMES%>
@@ -77,8 +77,8 @@
     </div>
 
     <div id="sweets" class="pagefont flowdown fullwidth padded">
-      <div class="flowleft padded"><h1><%= t.SWEETS %></h1></div>
-      <div class="flowleft">
+      <h1><%= t.SWEETS %></h1>
+      <div class="flowappropriately">
 	<div id="container" class="fifty">
           <%- include('sweets-' + lang + '.ejs') %>
 	</div>
@@ -98,7 +98,7 @@
 
     <div id="coffee" class="pagefont flowdown fullwidth padded">
       <h1><%= t.COFFEE %></h1>
-      <div class="flowleft fullwidth">
+      <div class="flowappropriately fullwidth">
         <div class="forty padded slideshow-container">
 	  <% for (var i = 0; i < coffee_images.length; i++) { %>
              <div class="coffeeSlides fade">
@@ -131,7 +131,7 @@
 
     <div class="flowdown pagefont padded" id="map">
       <h1><%=t.find_us%></h1>
-      <div class="flowleft fullwidth">
+      <div class="flowappropriately fullwidth">
         <div class="mapouter forty">
           <div class="gmap_canvas">
             <iframe height="546" id="gmap_canvas" src="https://maps.google.com/maps?q=The%20Multiverse,%20Ebertystra%C3%9Fe%2024,%20Berlin&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
