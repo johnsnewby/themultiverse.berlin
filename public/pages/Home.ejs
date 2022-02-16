@@ -79,11 +79,11 @@
     <div id="sweets" class="pagefont flowdown fullwidth padded">
       <h1><%= t.SWEETS %></h1>
       <div class="flowappropriately">
-	<div id="container" class="fifty">
+	<div id="container" class="forty">
           <%- include('sweets-' + lang + '.ejs') %>
 	</div>
 
-	<div id="sweets-slideshow" class="fifty padded slideshow-container">
+	<div id="sweets-slideshow" class="sixty padded slideshow-container">
 	  <% for (var i = 0; i < sweets_images.length; i++) { %>
              <div class="sweetsSlides fade">
                <img src="img/sweets/<%=sweets_images[i].filename%>"  alt="<%=sweets_images[i].alt%>" class="maxheight">
