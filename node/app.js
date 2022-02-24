@@ -49,6 +49,11 @@ fs.readdir("../public/img/sweets", function(err, files) {
     sweets_images = filenamesWithAlts(files);
 });
 
+var vegan_images = [];
+fs.readdir("../public/img/vegan", function(err, files) {
+    vegan_images = filenamesWithAlts(files);
+});
+
 var gallery_images = [];
 fs.readdir("../public/img/gallery", function(err, files) {
     gallery_images = filenamesWithAlts(files);
@@ -64,8 +69,10 @@ app.get(`/`, (req, res) => {
   console.log("get /");
   res.render('Home', {
     coffee_images: coffee_images.sort((a, b) => 0.5 - Math.random()),
-    sweets_images: sweets_images.sort((a, b) => 0.5 - Math.random()),
-    gallery_images: gallery_images.sort((a, b) => 0.5 - Math.random())
+      sweets_images: sweets_images.sort((a, b) => 0.5 - Math.random()),
+      vegan_images: vegan_images.sort((a, b) => 0.5 - Math.random()),
+      gallery_images: gallery_images.sort((a, b) => 0.5 - Math.random())
+      
   }
   );
 });

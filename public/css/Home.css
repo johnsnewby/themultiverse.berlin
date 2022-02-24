@@ -43,6 +43,10 @@ body {
     width: 50%;
 }
 
+.vegan {
+    color: green;
+}
+
 .maxheight {
     height: 400px;
     object-fit: contain;

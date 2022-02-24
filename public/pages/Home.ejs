@@ -17,6 +17,7 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <p onclick="smoothScroll(information)"><%=t.ABOUT %></p>
                 <p onclick="smoothScroll(sweets)"><%=t.SWEETS %></p>
+		<p onclick="smoothScroll(vegan)" class="vegan">VEGAN</p>
                 <p onclick="smoothScroll(coffee)"><%=t.COFFEE %></p>
                 <p onclick="smoothScroll(gallery)">GALLERY</p>
                 <p onclick="smoothScroll(map)"><%=t.MAP %></p>
@@ -92,6 +93,26 @@
              <!-- Next and previous buttons -->
              <a class="prev" onclick="showSlides('sweets', -1, false)">&#10094;</a>
              <a class="next" onclick="showSlides('sweets', 1, false)">&#10095;</a>
+	</div>
+      </div>
+    </div>
+
+    <div id="vegan" class="pagefont flowdown fullwidth padded">
+      <h1>VEGAN</h1>
+      <div class="flowappropriately">
+	<div id="container" class="forty">
+          <%- include('vegan-' + lang + '.ejs') %>
+	</div>
+
+	<div id="vegan-slideshow" class="sixty padded slideshow-container">
+	  <% for (var i = 0; i < vegan_images.length; i++) { %>
+             <div class="veganSlides fade">
+               <img src="img/vegan/<%=vegan_images[i].filename%>"  alt="<%=vegan_images[i].alt%>" class="maxheight">
+             </div>
+	     <% } %>
+             <!-- Next and previous buttons -->
+             <a class="prev" onclick="showSlides('vegan', -1, false)">&#10094;</a>
+             <a class="next" onclick="showSlides('vegan', 1, false)">&#10095;</a>
 	</div>
       </div>
     </div>
